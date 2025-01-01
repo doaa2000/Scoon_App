@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quran_app/core/utils/colors.dart';
+import 'package:quran_app/features/azkar/presentation/views/azkar_view.dart';
 
 class GridViewItem extends StatelessWidget {
   const GridViewItem({
@@ -9,7 +10,9 @@ class GridViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.pushNamed(context, AzkarView.routeName);
+      },
       child: Container(
         width: 110,
         height: 110,
